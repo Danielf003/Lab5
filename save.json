@@ -1,0 +1,2 @@
+{"id":1,"name":"kek","coordinates":{"x":3,"y":12},"creationDate":{"date":{"year":2020,"month":5,"day":21},"time":{"hour":2,"minute":58,"second":29,"nano":156000000}},"minimalPoint":10,"averagePoint":7,"difficulty":"HARD","discipline":{"name":"Math","lectureHours":12}}
+{"id":2,"name":"kek","coordinates":{"x":3,"y":12},"creationDate":{"date":{"year":2020,"month":5,"day":21},"time":{"hour":2,"minute":58,"second":29,"nano":157000000}},"minimalPoint":10,"averagePoint":8,"difficulty":"HARD","discipline":{"name":"Math","lectureHours":12}}
