@@ -1,5 +1,5 @@
 package examples;
-/**The enum for LabWork's field Difficulty. */
+/**The enum with values for LabWork's field Difficulty. */
 public enum Difficulty {
     NORMAL,
     HARD,

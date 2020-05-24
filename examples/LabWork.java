@@ -13,7 +13,14 @@ public class LabWork {
     private Discipline discipline; //Поле не может быть null
     private static HashSet<Integer> ids = new HashSet<>();
 
-    /**Assigns given values to the fields and writes used id to the list for later check. */
+    /**Assigns given values to the fields and writes used id to the list for later check. 
+     * @param n - Labwork Name
+     * @param c - Coordinates
+     * @param mp - Minimal Point
+     * @param ap - Average Point
+     * @param dif - Difficulty
+     * @param dis - Discipline
+    */
     public LabWork (String n, Coordinates c, Long mp, int ap, Difficulty dif, Discipline dis) {
         id = findNewId();
         ids.add(id);
@@ -26,7 +33,9 @@ public class LabWork {
         creationDate = LocalDateTime.now();
     }
 
-    /**Returns the first free id for next element. */
+    /**Returns the first free id for next element. 
+     * @return Returns next id to be used 
+    */
     public static Integer findNewId(){
         Integer cntr = 1;
         while(ids.contains(cntr)){
@@ -77,7 +86,9 @@ public class LabWork {
     public java.time.LocalDateTime getCreationDate() {
         return creationDate;
     }
-    /**Returns the list of used IDs. */
+    /**Returns the list of used IDs. 
+     * @return Returns hashSet with IDs
+    */
     public static HashSet<Integer> getIds() {
         return ids;
     }
