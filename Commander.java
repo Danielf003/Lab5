@@ -1,4 +1,5 @@
 import examples.*;
+
 /** The class to manage input and call the right methods accordingly.
  * Also provides a big part of console output.
 */
@@ -33,17 +34,22 @@ public class Commander {
             marker = "";
             Lab5.scriptPaths.clear();
             Lab5.bufferScript.clear();
-            System.out.println("An issue occured in this file."+"\nExecution is finished.\n#  #  #");
+            System.out.println("An issue occured in this file.\nExecution is finished.\n#  #  #");
         }
     }
-    /**Outputs text only in interactive mode. */
+    /**Outputs text only in interactive mode.
+     * @param s - text to informate user
+    */
     public static void infoMsg(String s){
         if(!Lab5.getIsScript())
             System.out.println(s);
     }
 
-    /** Distributes different input forms to the right methods.*/
-    public static void сheck(String s1, String s2){
+    /** Distributes different input forms to the right methods.
+     * @param s1 - command or field value
+     * @param s2 - possible argument
+    */
+    public static void check(String s1, String s2){
         if (marker == "") {
             if (s2 == "") {
                 checkSimpleComm(s1);
@@ -61,7 +67,9 @@ public class Commander {
             }
         }
     }
-    /**Distributes single word to the according command. */
+    /**Distributes single word to the according command.
+     * @param s1 - command
+     */
     public static void checkSimpleComm(String s1){
         switch (s1) {
             case "help":
@@ -145,7 +153,10 @@ public class Commander {
                 stopScriptReading();
         }
     }
-    /**Distributes two words to the according command and argument. */
+    /**Distributes two words to the according command and argument.
+     * @param s1 - command
+     * @param s2 - argument
+     */
     public static void checkSimpleCommArg(String s1, String s2){
         switch (s1) {
             case "execute_script":
@@ -199,7 +210,9 @@ public class Commander {
         }
     }
     /**Distributes single word to the according field and calls commands (collection editors) 
-     * at the end of input branch. */
+     * at the end of input branch. 
+     * @param s1 - field value
+     */
     public static void checkComplexArg(String s1){
         switch (marker) {
             case "ln":

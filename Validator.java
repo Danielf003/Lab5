@@ -1,3 +1,4 @@
+import examples.*;
 /**The class for input validation. */
 public class Validator {
     public static boolean isEmpty(String s){
@@ -26,7 +27,7 @@ public class Validator {
     }
     public static boolean isDiff(String s){
         try {
-            examples.Difficulty.valueOf(s);
+            Difficulty.valueOf(s);
             return true;
         }
         catch(IllegalArgumentException e){

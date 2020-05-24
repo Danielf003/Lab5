@@ -69,8 +69,6 @@ public class Lab5 {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         String line = "";
         
-        Commands.add("kek", 3, 12L, 10L, 7, Difficulty.HARD, "Math", 12L);
-        Commands.add("kek", 3, 12L, 10L, 8, Difficulty.HARD, "Math", 12L);
         if(path == null || path == "")
             path = "save.json";
         if(!isScript)
@@ -102,9 +100,9 @@ public class Lab5 {
             String[] words = line.split(" ");
 
             if(words.length == 1)
-                Commander.сheck(words[0], "");
+                Commander.check(words[0], "");
             else if(words.length == 2 && Commander.getMarker() == "")
-                Commander.сheck(words[0], words[1]);
+                Commander.check(words[0], words[1]);
             else{
                 if(Commander.getMarker() == "")
                     System.out.println("The input is not a command, it can't be more than a\nsingle-word"+

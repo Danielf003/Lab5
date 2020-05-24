@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 import java.util.Iterator;
 
 /** The class which contains commands for the Commander class.
+ * You can learn command's meaning by viewing task or calling 'help' during execution
 */
 public class Commands {
     static void add(String Ln, int cx, Long cy, Long mp, int ap, Difficulty dif, String Dn, long Lh){
@@ -53,7 +54,7 @@ public class Commands {
         "deletes all the labworks in the collection\n\tsave - stores the collection into a file which is defined in SavePath env variable"+
         "\n\t  or in the current folder in 'save.json' if not defined\n\texit - quits the programm without saving\n\t"+
         "average_of_average_point - displays an average value of the field 'averagePoint' for all the labworks\n\t"+
-        "execute_script file_path_and_name - executes a .txt file with the same syntax as in interactive mode\n\t  "+
+        "execute_script file_path_and_name - executes a script with the same syntax as in interactive mode\n\t  "+
         "from the file with name (and optionally location) given by user."+
         "\n\tremove_by_id id - deletes a labwork by its id\n\tremove_lower id - deletes all the labworks lower than given"+
         "\n  Complex:\n\tremove_all_by_difficulty - deletes all the labworks with given difficulty (1)\n\t"+
@@ -64,7 +65,8 @@ public class Commands {
         "The number in brackets is the number of extra lines (steps) for a command.\n"+
         "For all complex commands the instructions for the extra lines will be displayed during execution.\n"+
         "IMPORTANT: Labworks in the collection are sorted by id in current version of this app, so all the operations\n"+
-        "with comparison will use id to compare labworks.");
+        "with comparison will use id to compare labworks. For example, 'add_if_min' will add a labwork\n"+
+        "only if there is at least 1 free id between 0 and the max id in the collection.");
         System.out.println("#   #   #");
     }
     static void info(){
